@@ -1,0 +1,12 @@
+# .gitignore
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+target/
+
+# Node.js
+node_modules/
+dist/
+.env

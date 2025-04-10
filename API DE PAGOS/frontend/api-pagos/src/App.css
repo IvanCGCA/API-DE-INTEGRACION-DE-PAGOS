@@ -1,0 +1,121 @@
+/* App.css */
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+select {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.payment-form, .payment-actions {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.payment-actions button {
+  background-color: #f44336;
+}
+
+.payment-actions button:hover {
+  background-color: #d32f2f;
+}
+
+.payment-status {
+  color: #ff9800;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  background-color: #e7e7e7;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+li span {
+  font-weight: bold;
+  color: #333;
+}
