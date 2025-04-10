@@ -91,3 +91,9 @@ C:\SQLITE>sqlite3 C:\Users\eclipse-workspace\IntegracionPagos\db\pagos.db
 
 
 .....................................................................................
+
+Linkedin:
+
+www.linkedin.com/in/ivan-vega-porras
+
+
