@@ -92,6 +92,33 @@ C:\SQLITE>sqlite3 C:\Users\eclipse-workspace\IntegracionPagos\db\pagos.db
 
 .....................................................................................
 
+Crear Pago:
+
+![image](https://github.com/user-attachments/assets/ae221c81-a92f-4c3e-bcc7-67ff060195b6)
+
+
+Ver pagos:
+
+![image](https://github.com/user-attachments/assets/16c0a042-e5c7-4528-a649-6f10a808e3fe)
+
+
+
+Consultar pago:
+
+![image](https://github.com/user-attachments/assets/08f33a91-00de-4b3f-95d0-5ee29057c30c)
+
+
+Eliminar pago:
+
+![image](https://github.com/user-attachments/assets/6dd4cb82-2668-4fd8-a735-3c47ac44c215)
+
+
+Consola Kafka mensajes del topico: 
+
+![image](https://github.com/user-attachments/assets/0d88eb4f-bc2b-4c99-a25e-ac4cdef4eefc)
+
+
+
 Linkedin:
 
 www.linkedin.com/in/ivan-vega-porras
