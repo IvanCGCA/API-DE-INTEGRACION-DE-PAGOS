@@ -1,126 +1,126 @@
-API DE INTEGRACION DE PAGOS
+# 💳 Payment Integration API (Event-Driven)
 
-API pensada para implementar algun servicio de pagos, como Stripe por ejemplo
+## 📝 Project Overview
+The **Payment Integration API** is a full-stack, event-driven application designed to simulate and manage payment gateway transactions (similar to services like Stripe). It leverages a robust Spring Boot backend to process transactions, while utilizing Apache Kafka for asynchronous message brokering, ensuring high availability and scalable data flow.
 
+## 🛠️ Tech Stack & Architecture
 
-.................................................................................
+**Frontend (Client)**
+* **Framework:** React.js
+* **Styling:** HTML5, CSS3
 
+**Backend (Server)**
+* **Language/Framework:** Java, Spring Boot
+* **Build Tool:** Maven
+* **Architecture:** RESTful API
 
-Tecnologías usadas:
+**Message Broker**
+* **Service:** Apache Kafka (Local instance with Zookeeper)
 
-• Frontend: React.js, HTML, CSS
-• Backend: Java (Spring Boot) 
-• Mensajería: Kafka (local)
-• Base de datos: SQLite 
-• API: API RESTful para el backend
+**Database**
+* **Engine:** SQLite (Designed with adaptability for migration to robust relational databases like PostgreSQL or MySQL)
 
-.................................................................................
+## 🚀 Getting Started (Local Development)
 
+### Prerequisites
+Make sure you have the following installed:
+* [Java Development Kit (JDK)](https://adoptium.net/) (11 or higher)
+* [Apache Maven](https://maven.apache.org/)
+* [Node.js](https://nodejs.org/)
+* [Apache Kafka](https://kafka.apache.org/downloads) (Windows environment configured)
 
-INSTALACION Y USO DE BACKEND:
+---
 
-El backend se realizo en eclipse, es necesario contar con el o se sugiere,
-instalar spring boot en eclipse, maven, algunas dependencias ya vienen
-en el archivo POM no deberia generar mucho problema
+### 1. 🐘 Starting Apache Kafka (Windows)
+Open a terminal and navigate to your Kafka binary folder (e.g., `C:\Kafka\kafka_2.13-3.3.2\bin\windows`).
 
-Para ejecutar el codigo, es necesario actualizar el proyecto por medio de maven,
-despues limpiar el proyecto, despues correr el codigo como java aplication
-
-
-----------------------------------------------------------------------------------
-
-
-INSTALACION Y USO DE FRONTEND
-
-El frontend fue creado en VSCode, solo es necesario agregar las extensiones 
-en el mismo IDE en cuanto a react.js, node.js, algunas visuales si se prefiere
-
-Para ejecutar el codigo, desde la terminal se puede ejecutar el comando "npm start"
-
-
-.....................................................................................
-
-
-BASE DE DATOS
-
-Para este proyecto se utilizo sqlite, sin embargo puede adaptarse a usar un SQL
-mas poderoso.
-
-
-.....................................................................................
-
-
-KAFKA
-
-ZOOKEEPEER:
-
-Abre una terminal o línea de comandos y navega a la carpeta bin/windows dentro de tu instalación de Kafka:
-
-cd C:\Kafka\kafka_2.13-3.3.2\bin\windows
-Ejecuta el siguiente comando para iniciar Zookeeper:
-
+**Start Zookeeper:**
+```cmd
 zookeeper-server-start.bat ..\..\config\zookeeper.properties
-Zookeeper debería iniciarse sin problemas. Deja la terminal abierta mientras Kafka y Zookeeper están en ejecución.
+```
 
-KAFKA:
+Leave this terminal open.
 
-En una nueva terminal, navega a la misma carpeta bin/windows:
+Start Kafka Server:
 
-cd C:\Kafka\kafka_2.13-3.3.2\bin\windows
-Ejecuta el siguiente comando para iniciar Kafka:
+Open a new terminal in the same directory:
 
+```cmd
 kafka-server-start.bat ..\..\config\server.properties
+```
 
+Leave this terminal open.
 
-Consultrar mensajes:
+2. ☕ Setting up the Backend (Spring Boot)
+Open a terminal in the backend project directory:
 
+```Bash
+# Update dependencies and clean the project
+mvn clean install
+
+# Run the Spring Boot application
+mvn spring-boot:run
+```
+
+(Alternatively, you can import the pom.xml into your favorite IDE like Eclipse or IntelliJ and run it as a Java Application).
+
+3. ⚛️ Setting up the Frontend (React)
+Open a terminal in the frontend project directory:
+
+```Bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+4. 🗄️ Database Access (SQLite)
+To query the database manually, open a terminal in your SQLite installation directory:
+
+```DOS
+sqlite3 C:\path\to\your\project\IntegracionPagos\db\pagos.db
+```
+
+📡 Kafka Topic Monitoring
+
+To verify that payment events are being published correctly, open a terminal in the Kafka bin/windows directory and run the consumer:
+
+```DOS
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test_topic --from-beginning
+```
 
+📸 Functionality Overview & Screenshots
 
-
-.....................................................................................
-
-
-SQLITE
-
-Abrir una terminal e ir al directorio donde se tenga instalado sqlite:
-
-C:\SQLITE>
-
-C:\SQLITE>sqlite3 C:\Users\eclipse-workspace\IntegracionPagos\db\pagos.db
-
-
-.....................................................................................
-
-Crear Pago:
+Create Payment:
 
 ![image](https://github.com/user-attachments/assets/ae221c81-a92f-4c3e-bcc7-67ff060195b6)
 
 
-Ver pagos:
+View All Payments:
 
 ![image](https://github.com/user-attachments/assets/16c0a042-e5c7-4528-a649-6f10a808e3fe)
 
 
 
-Consultar pago:
+Query Specific Payment:
 
 ![image](https://github.com/user-attachments/assets/08f33a91-00de-4b3f-95d0-5ee29057c30c)
 
 
-Eliminar pago:
+Delete Payment:
 
 ![image](https://github.com/user-attachments/assets/6dd4cb82-2668-4fd8-a735-3c47ac44c215)
 
 
-Consola Kafka mensajes del topico: 
+Kafka Event Logs:
 
 ![image](https://github.com/user-attachments/assets/0d88eb4f-bc2b-4c99-a25e-ac4cdef4eefc)
 
 
 
-Linkedin:
+Linkedin: www.linkedin.com/in/ivan-vega-porras
 
-www.linkedin.com/in/ivan-vega-porras
 
+Developed by Iván Vega Porras
 
